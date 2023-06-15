@@ -1,0 +1,8 @@
+- shortcode: photography
+  heading: Get our free photography e-book
+  button-url: #
+  type: download
+- shortcode: web-dev
+  heading: Get our free web dev mini-course
+  button-url: #
+  type: link

@@ -1,0 +1,26 @@
+seo:
+  site_name: Tina's Amazing Blog
+  title: Default SEO Title
+  description:
+  keywords:
+  social_image:
+  author:
+  favicon_image:
+social:
+  instagram_username:
+  facebook_url:
+  twitter_username:
+cta-shortcode:
+  - web-dev
+  - photography
+design:
+  dark-text_color: "rgb(60,60,65)"
+  medium-text_color: "rgb(90,90,95)"
+  light-text_color: "#f7f5f3"
+  featured-text_color: "red"
+  dark_color: "rgb(60,60,65)"
+  medium_color: "#ede8e4"
+  light_color: "#f7f5f3"
+  v-light_color: "#f9f9f9"
+  featured_color: "#6495ed"
+  accent_color: "rgb(167, 74, 74)"

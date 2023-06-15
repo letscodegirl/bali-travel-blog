@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+
+<section class="md:flex p-8 max-w-screen-xl mx-auto">
+
+    <div class="p-4">
+        <div class="p-4">
+
+            {% for item in page.categories %}
+                <span class="tag"> {{ item }}</span>
+            {% endfor %}
+            
+            <h1 class="text-6xl mt-4 mb-8"> {{ page.title }} </h1>
+            
+            <p class="tag"> by {{ page.author }} | {{ page.date | date_to_string }} </p>
+         
+        </div>
+        <div class="p-4 prose prose-stone max-w-none">
+
+            {{content}}
+
+        </div>
+        
+        {% include social-share.html %}
+
+    </div>
+
+    <!------------------ SIDEBAR  --------------------------------->
+    <aside class="p-4 md:w-96 shrink-0">
+
+        <div class="bg-stone-200 p-4 m-4">
+
+            <h4> About me </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore totam nesciunt blanditiis. Laboriosam accusantium officia illo autem placeat laborum vel eaque! Consequuntur nobis assumenda impedit accusamus earum molestiae velit accusantium.</p> 
+
+        </div>
+
+        <div class="bg-stone-200 p-4 m-4">
+            <h4> Recent Posts </h4>
+
+            <nav class="recent-posts-nav"> 
+                {% for post in site.posts limit:5 %}
+                     <a href="{{post.url}}" class="block"> {{post.title}}</a>
+                {% endfor %}
+            </nav>
+
+        </div>
+
+        <div class="bg-stone-200 p-4 m-4">
+            <h4> Explore Categories </h4>
+
+            <nav> 
+                {% for archive in site.archives limit:8 %}
+                     <a href="{{archive.url}}" class="tag"> {{archive.category}}</a>
+                {% endfor %}
+            </nav>
+
+        </div>
+
+    </aside> <!-- end sidebar-->
+
+</section>
+
+{% include related-posts.html %}

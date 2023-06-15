@@ -1,0 +1,17 @@
+
+<!-- Since the post loop item uses a column class, make sure the parent container has a grid -->
+
+<div class="p-4 bg-zinc-100 hover:bg-zinc-200">
+    <a href="{{ post.url }}">
+        <p>
+        {% for item in post.categories %}
+            <span class="tag"> {{item}} </span>
+        {% endfor %}
+        </p>
+        <h2 class="mt-1 mb-2 font-serif text-2xl"> {{ post.title }} </h2>
+        <p class="text-zinc-600"> {{ post.description }} </p>
+
+    </a>
+</div>
+
+

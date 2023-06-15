@@ -1,0 +1,35 @@
+<section class="bg-zinc-100 p-5p related-posts">
+  <div class="max-w-screen-xl mx-auto">
+
+    <h4 class="text-center font-serif text-2xl mb-4"> Related Posts </h4>
+    
+    <div class="grid grid-cols-3 align-items-center">
+    
+    
+    {% capture pageCategory %}{{ page.categories[0] }}{% endcapture %}
+
+    {% assign relevant-posts = site.categories[pageCategory] | where_exp:"post","post.url != page.url and post.hidden != true" %}
+
+      {% for post in relevant-posts limit:3 %}
+
+          <a class="p-2 block mb-4" href="{{ post.url }}">
+            <div class="bg-cover aspect-square" style="background-image:url( '{{ post.featured_image }}' );"></div>
+            <div class="p-4 relative bg-white">
+                
+                <p>
+                {% for item in post.categories %}
+                    <span class="tag mr-2"> {{item}} </span>
+                {% endfor %}
+                </p>
+                <h2 class="mt-1 font-serif text-3xl"> {{ post.title }} </h2>
+                <hr class="border-rose-600 w-10 border-t-2 mt-4 mb-2"> 
+                <p class="tag"> By <span class="font-bold mr-1">{{ post.author }}</span> {{ post.date | date_to_string }} </p>
+
+            </div>
+        </a>
+          
+      {% endfor %}
+    </div>
+  </div>
+    
+</section>

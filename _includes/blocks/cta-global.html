@@ -1,0 +1,23 @@
+<section class="flex justify-center p-5p {{block.background-color}} {{block.text-color}}">
+
+  {% assign active-cta == block.cta-shortcode %}
+  {% assign active-cta = site.data.cta | where: "shortcode", active-cta %}
+
+  <!-- Need to test this liquid -->
+
+  <h2> {{active-cta.heading}} </h2> <a href="{{active-cta.button-url}}" class="button {{button-color}}">
+    {{active-cta.button-text}} </a>
+
+</section>
+
+<!-- Note, this CTA is global, you update it in the data file and it updates everywhere, 
+    the only thing you choose per block is the colors and which CTA to use -->
+<!-- 
+
+Config Options 
+
+cta-shortcode:
+background-color: 
+text-color: 
+button-color: 
+--->

@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section class="p-5p">
+
+    <div class="max-w-screen-xl mx-auto">
+
+        <div class="p-2 mb-8 text-center">
+            <h2 class="font-serif text-4xl mb-2"> Blog Archive </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat necessitatibus? Praesentium fugit ex neque magni, possimus, iste itaque voluptatem id doloremque voluptas consequatur dolor cumque! Dolores possimus laboriosam adipisci.</p>
+        </div>
+    
+        <div class="grid grid-cols-4">
+
+            {% for post in site.categories[page.category] limit:25 %}
+
+                {% include post-loop-item-square.html %}
+
+            {% endfor %}
+        </div>
+    </div>
+
+</section> 

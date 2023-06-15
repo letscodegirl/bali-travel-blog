@@ -1,0 +1,29 @@
+<!--  Text content block  -->
+<section class="p-5p {{block.section-styles | join: ' ' }}"> 
+    <div class="grid md:grid-cols-{{number-of-columns-desktop}} grid-cols-{{number-of-columns-mobile}}">
+
+        {% for item in block.columns %}
+
+        <div class="col-span-1 p-2 bg-cover aspect-{{block.aspect-ratio}}" 
+            {% if item.background-image %} style="background-image:url('{{item.background-image}}')" {% endif %} >
+            {{block.content_html}}
+        </div>
+
+        {% endfor %}
+            
+    </div> 
+</section> 
+
+
+
+<!-- 
+
+ Config:
+ 
+ section-styles: 
+ number-of-columns: 
+ columns: []
+    background-image: 
+    content_html:
+
+ -->

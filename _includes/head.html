@@ -1,0 +1,49 @@
+<!------------ Technical Metadata  --------------------------------->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+<!------------ SEO Metadata  --------------------------------->
+<title> {{page.seo.title | default: site.data.site-settings.seo.title }} </title> 
+<meta name="description" content="{{page.seo.description | default: site.data.site-settings.seo.description }}">
+<meta name="keywords" content="{{page.seo.keywords | default: site.data.site-settings.seo.keywords }}">
+
+{% if page.seo.hide-from-google == true %}
+    <meta name="robots" content="noindex, nofollow">
+{% else %}
+     <meta name="robots" content="index, follow">
+{% endif %}
+
+
+<!------------  Social media sharing META Tags ------------>
+<meta property="og:title" content="{{ page.title | default: site.data.site-settings.seo.title }}">
+<meta property="og:description" content="{{ page.seo.description | default: site.data.site-settings.seo.description }}"> 
+<meta property="og:image" content="{{ page.seo.social_image | default: site.data.site-settings.seo.social_image }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:card" content="{{ page.seo.twitter_card | default: site.data.site-settings.seo.twitter_card }}">
+<meta name="og:site_name" content="{{ site.data.site-settings.seo.site_name }}">
+<link rel="icon" type="image/png" href="{{ site.data.site-settings.seo.favicon_image }}">
+
+<!------------ Pinterest Meta Tags ------------>
+<meta property="article:author" content="{{ page.author | default: site.seo.author }}" />
+
+<!------------ External Stylesheets  ------------>
+
+<link rel="stylesheet" type="text/css" href="/assets/css/output-style.css">
+
+<!-- Font Awesome Version 5 for Icons  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+
+<!-- Google Font  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet"> 
+
+<!-- Custom Stylesheet  -->
+<link rel="stylesheet" type="text/css" href="/editor.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/style.css" /> -->
+

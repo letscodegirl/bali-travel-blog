@@ -1,0 +1,43 @@
+---
+layout: default
+title: Blog Archive
+---
+
+<!------------------------ Split blog loop (part 1) ------------------------>
+<section class="p-5p archive">
+
+    <div class="max-w-screen-lg mx-auto p-2 center mb-8 text-center">
+        <h2 class="font-serif text-4xl mb-2"> Blog Archive - Option 1 </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat necessitatibus? Praesentium fugit ex neque magni, possimus, iste itaque voluptatem id doloremque voluptas consequatur dolor cumque! Dolores possimus laboriosam adipisci.</p>
+    </div>
+
+    <div class="max-w-screen-xl mx-auto grid lg:grid-cols-2 gap-4">
+
+        {% for post in site.posts limit:10 %}
+
+            {% include post-loop-list-item.html %}
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<section class="p-5p archive">
+
+    <div class="max-w-screen-lg mx-auto p-2 center mb-8 text-center">
+        <h2 class="font-serif text-4xl mb-2"> Blog Archive - Option 2 </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat necessitatibus? Praesentium fugit ex neque magni, possimus, iste itaque voluptatem id doloremque voluptas consequatur dolor cumque! Dolores possimus laboriosam adipisci.</p>
+    </div>
+
+    <div class="max-w-screen-xl mx-auto grid gap-4">
+
+        {% for post in site.posts limit:10 %}
+
+            {% include post-loop-list-item-simple.html %}
+
+        {% endfor %}
+
+    </div>
+
+</section>

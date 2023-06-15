@@ -1,0 +1,41 @@
+
+/* ----------- Import Tailwind -----*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ----------- Default Styles --------- */
+
+@layer base {
+
+    h1, h2, h3, h4  {
+        @apply font-serif mb-[0.5em];
+    }
+
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    h3 {
+        @apply text-xl;
+    }
+
+    h3 {
+        @apply text-lg;
+    }
+
+  }
+
+
+/* ----------- ADDITIONAL COMPONENTS  --------- */
+
+@layer components {
+
+    .tag {
+        @apply text-sm inline-block p-1 uppercase tracking-wide text-stone-600;
+    }
+
+}

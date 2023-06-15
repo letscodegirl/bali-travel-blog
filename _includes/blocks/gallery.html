@@ -1,0 +1,27 @@
+<!-- Gallery block -->
+
+<section class="p-2">
+    <div class="gallery grid md:grid-cols-3 gap-2">
+  
+      {% for item in block.gallery-images %}
+  
+        <div class="col-span-{{item.column-size}} gallery-item bg-image aspect-{{item.aspect-ratio}}" 
+               style="background-image: url('{{item.image_path}}');">
+        </div>
+    
+      {% endfor %}
+      
+    </div>
+</section> 
+
+<!-- 
+
+Config Options: 
+
+gallery-images: []
+    image_path:
+    column-size: 1 / 2 / 3
+    apsect-ratio: square / portrait / landscape
+
+
+ -->
