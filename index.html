@@ -1,8 +1,22 @@
 ---
 layout: default
-title: Homepage
+title: Homepage 
 banner-image: /uploads/travel/travel-20.jpg
 about-image: /uploads/travel/travel-21.jpg
+destination-image: /uploads/travel/travel-22.jpg
+destinations: 
+  - destination: Bali
+    start-date: 01/01/2022
+    end-date: 15/01/2022
+  - destination: South Africa
+    start-date: 01/05/2022
+    end-date: 15/05/22
+  - destination: Thailand
+    start-date: 01/02/2023
+    end-date: 15/03/2023
+  - destination: Europe
+    start-date: 01/04/2023
+    end-date: 15/05/2023
 seo:
   title: 
   description:
@@ -30,6 +44,34 @@ seo:
       <a href="#" class="text-serif tracking-wide"> Read More </a>
     </div>
   </div>
+</section>
+
+<section class="p-5p max-w-screen-xl grid grid-cols-5 gap-4">
+  <div class="col-span-full">
+    <h2 class="text-4xl uppercase text-center mb-8"> Upcoming Travel Destinations </h2>
+  </div>
+  
+  <div class="col-span-3 p-8">
+
+      <hr class="border border-zinc-800 border-b-0"> 
+
+      {% for item in page.destinations %}
+
+      <div class="flex justify-between"> 
+        <p class="my-6 tracking-wide uppercase"> {{item.destination}} </p>
+        <p class="my-6"> {{item.start-date | date_to_string}} - {{item.end-date | date_to_string}} </p>
+      </div>
+      <hr class="border border-zinc-800 border-b-0">
+
+      {% endfor %} 
+
+  </div> 
+  <div class="col-span-2 bg-cover bg-center py-8 flex items-end" style="background-image: url('{{page.destination-image}}')">
+    <h2 class="bg-stone-200 p-4 text-3xl">
+      Currently in...
+    </h2>
+  </div> 
+
 </section>
 
 

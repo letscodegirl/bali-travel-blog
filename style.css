@@ -5,9 +5,25 @@
 @tailwind utilities;
 
 
+/* Browser Compatability - Aspect Ratio Fallback */
+
+.aspect-square {
+    padding-bottom: 100%; /* aspect 1/1 */
+}
+
+.aspect-portrait {
+    padding-bottom: 133%;  /* aspect 3/4 */
+}
+
+.aspect-landcsape {
+    padding-bottom: 60%; /* aspect 5/3 */
+}   
+
+
 /* ----------- Default Styles --------- */
 
 @layer base {
+
 
     h1, h2, h3, h4  {
         @apply font-serif mb-[0.5em];
