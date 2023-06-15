@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Figtree', 'sans-serif'],
-      serif: ['Playfair Display', 'serif'],
+      sans: ['Montserrat', 'sans-serif'],
+      serif: ['Italiana', 'serif'],
     },
     extend: {
       spacing: {
@@ -18,7 +18,7 @@ module.exports = {
         '15p': '15%',
       },
       aspectRatio: {
-        'landscape': '2 / 1 ',
+        'landscape': '4 / 3 ',
         'portrait': '3 / 4',
         'portrait-tall': '3 / 5',
       },

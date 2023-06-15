@@ -1,0 +1,22 @@
+
+<header class="text-center">
+
+    <a href="/" class="inline-block logo text-6xl font-serif p-8"> VOGUE </a>
+
+    <nav class="flex items-center md:justify-center border-y-2 border-slate-600 md:overflow-x-auto overflow-x-scroll md:flex-wrap flex-nowrap">
+
+
+          {% for cat in site.archives %}
+
+          <a href="{{cat.url}}" class="p-4 uppercase whitespace-nowrap hover:text-rose-600"> {{cat.category}} </a>
+
+          {% endfor %}
+
+    </nav> 
+
+  </header>
+
+
+<!-- 
+  NOTE - need to style scrollbars more beeautifully and browser compatibly
+--> 

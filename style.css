@@ -14,17 +14,39 @@
     }
 
     h1 {
-        @apply text-2xl;
+        @apply text-2xl leading-tight;
     }
     h2 {
-        @apply text-xl;
+        @apply text-xl leading-tight;
     }
     h3 {
-        @apply text-xl;
+        @apply text-xl leading-tight;
     }
 
     h3 {
-        @apply text-lg;
+        @apply text-lg leading-tight;
+    }
+    h4 {
+        @apply text-lg leading-tight;
+    }
+
+    p {
+        @apply mb-[0.5em] leading-normal;
+    }
+
+    a {
+        @apply underline-offset-2;
+    }
+
+    .prose blockquote {
+
+        @apply font-serif text-4xl leading-none not-italic border-none p-2 my-4 max-w-lg mx-auto;
+
+    }
+    .prose blockquote p {
+
+        @apply leading-tight text-center ;
+
     }
 
   }
@@ -38,4 +60,7 @@
         @apply text-sm inline-block p-1 uppercase tracking-wide text-stone-600;
     }
 
+    .small-caps {
+        font-variant: small-caps;
+    }
 }

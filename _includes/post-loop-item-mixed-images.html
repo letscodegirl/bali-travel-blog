@@ -1,0 +1,20 @@
+
+
+<a class="p-2 break-inside-avoid block mb-4" href="{{ post.url }}">
+    <div class="bg-cover 
+    {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %}
+    relative">
+        <img src="{{ post.featured_image }}" alt="{{post.title}}" class="absolute inset-0 w-full h-full object-cover">
+    </div>
+    <div class="p-8 relative bg-stone-100">
+        
+
+        <h2 class="mt-1 font-sans small-caps text-2xl"> {{ post.title }} </h2>
+        <p class="line-clamp-2 tracking-wide mb-4"> {{ post.description }}</p>
+        <p class="uppercase underline font-serif text-xl underline-offset-4 tracking-wider"> 
+            Read More
+        </p>
+
+    </div>
+</a>
+

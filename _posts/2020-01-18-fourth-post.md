@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My fourth post 
+title: My Fourth Post 
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sunt earum, ab, eum dolore perspiciatis tenetur alias aspernatur
 author: Catherine
 featured: true

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Homepage
+banner-image: /uploads/travel/travel-20.jpg
+about-image: /uploads/travel/travel-21.jpg
 seo:
   title: 
   description:
@@ -10,40 +12,46 @@ seo:
   hide-from-google: false
 ---
 
+
+<section class="ml-[20%] p-5p bg-cover bg-center flex items-center text-white min-h-80" style="background-image: url('{{page.banner-image}}')">
+  <div class="-ml-[20%]"> 
+     <h2 class="text-[10vw] font-light mb-12 leading-[0.9]"> A whole <br> new world. </h2> 
+     <h3 class="text-2xl uppercase max-w-screen-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusantium explicabo itaque cupiditate, recusandae, perspiciatis pariatur, error maxime unde tempore asperiores doloribus. </h3> 
+  </div> 
+</section> 
+
+<section class="bg-stone-100 p-5p">
+<div class="grid grid-cols-2 max-w-screen-xl mx-auto">
+  <div class="bg-image bg-cover bg-center" style="background-image: url('{{page.about-image}}')"> </div>
+  <div class="py-15p px-8">
+    <h2 class="p-8 text-center -ml-[20%] bg-stone-300 text-5xl max-w-sm"> A fascinating heading about the site </h2>
+    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore eligendi blanditiis necessitatibus. Aspernatur quis alias corrupti recusandae eligendi sunt qui enim incidunt dolore quam assumenda eos aliquid, quae illum.</p>
+    <p>Dolor quisquam est laudantium assumenda dicta fugiat dolorem earum animi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quod laboriosam sint, placeat ut ratione aliquid mollitia quaerat asperiores optio, eius debitis, dolores at provident tempore iure. Quam, explicabo tempore!
+      <a href="#" class="text-serif tracking-wide"> Read More </a>
+    </div>
+  </div>
+</section>
+
+
 <!-- {{site.data.site-settings.global-cta-options}} -->
 <!------------------------ Featured blog loop ------------------------>
 <section class="p-5p">
 
-    <div class="max-w-screen-xl mx-auto md:columns-3">
+    <div class="max-w-screen-xl mx-auto flex justify-between mb-4">
+      <div class="text-3xl">&#8249;</div>
+      <h2 class="uppercase font-serif text-2xl tracking-wide"> Recently on the blog </h2>
+      <div class="text-3xl">&#8250;</div>
+    </div>
+    <div class="max-w-screen-xl mx-auto grid grid-cols-7">
 
 
         {% assign featured_posts = site.posts | where: 'featured', true %}
-
-        {% for post in featured_posts limit:12 %}
-
-            <a class="post-item p-2 break-inside-avoid block mb-4" href="{{ post.url }}">
-
-                <!-- Background image -->
-                <div class="bg-cover 
-                {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %}" 
-                style="background-image:url( '{{ post.featured_image }}' );"></div>
-
-                <!-- Text container  -->
-                <div class="p-4 relative -top-4 left-4 bg-white">
-                    
-                    <p>
-                    {% for item in post.categories %}
-                        <span class="tag"> {{item}} </span>
-                    {% endfor %}
-                    </p>
-                    <h2 class="mt-1 font-serif text-3xl"> {{ post.title }} </h2>
-                    <hr class="border-rose-600 w-10 border-t-2 mt-4 mb-3"> 
-                    <p class="tag"> 
-                        <span class="font-bold mr-1">{{ post.author }}</span> {{ post.date | date_to_string }} 
-                    </p>
-
-                </div>
-            </a>
+        
+        {% for post in featured_posts limit:3 %}
+      
+        <div class="{% cycle 'col-span-2', 'col-span-3', 'col-span-2' %}">
+          {% include post-loop-item.html %}
+        </div>
 
         {% endfor %}
   

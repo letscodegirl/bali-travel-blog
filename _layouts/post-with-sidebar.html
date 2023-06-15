@@ -3,7 +3,8 @@ layout: default
 ---
 
 
-<section class="md:flex p-8 max-w-screen-xl mx-auto">
+<section class="">
+<div class="md:flex p-8 max-w-screen-xl mx-auto">
 
     <div class="p-4">
         <div class="p-4">
@@ -30,15 +31,15 @@ layout: default
     <!------------------ SIDEBAR  --------------------------------->
     <aside class="p-4 md:w-96 shrink-0">
 
-        <div class="bg-stone-200 p-4 m-4">
+        <div class="bg-stone-200 p-6 m-4">
 
-            <h4> About me </h4>
+            <h4 class="uppercase text-xl tracking-wide"> About me </h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore totam nesciunt blanditiis. Laboriosam accusantium officia illo autem placeat laborum vel eaque! Consequuntur nobis assumenda impedit accusamus earum molestiae velit accusantium.</p> 
 
         </div>
 
-        <div class="bg-stone-200 p-4 m-4">
-            <h4> Recent Posts </h4>
+        <div class="bg-stone-200 p-6 m-4">
+            <h4 class="uppercase text-xl tracking-wide"> Recent Posts </h4>
 
             <nav class="recent-posts-nav"> 
                 {% for post in site.posts limit:5 %}
@@ -48,8 +49,8 @@ layout: default
 
         </div>
 
-        <div class="bg-stone-200 p-4 m-4">
-            <h4> Explore Categories </h4>
+        <div class="bg-stone-200 p-6 m-4">
+            <h4 class="uppercase text-xl tracking-wide"> Explore Categories </h4>
 
             <nav> 
                 {% for archive in site.archives limit:8 %}
@@ -60,7 +61,7 @@ layout: default
         </div>
 
     </aside> <!-- end sidebar-->
-
+    </div>
 </section>
 
 {% include related-posts.html %}
