@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<section class="max-w-screen-xl mx-auto"> 
+    <div class="grid grid-cols-2 gap-4 min-h-70">
+        <div class="py-12 self-end max-w-lg">
+            <h1 class="text-6xl">{{page.title}}</h1>
+            <h2 class="text-2xl uppercase"> {{page.subtitle}}</h2>
+            <p class="mb-6"> {{page.description}} </p>
+            <a href="{{page.buy-button-url}}" class="inline-block px-4 py-2 bg-zinc-800 text-white uppercase"> BUY NOW ${{page.price}}</a>
+        </div>
+        <div class="relative">
+            <img src="{{page.featured-image}}" class="min-h-50 absolute inset-0 h-full w-full object-cover">
+        </div>
+    </div>
+</section> 
+
+<section class="bg-stone-100 p-5p">
+    <div class="grid grid-cols-5 max-w-screen-xl mx-auto">
+        <div class="col-span-3 p-8">
+
+            {% include before-and-after-slider.html %}
+
+        </div>
+        <div class="col-span-2 p-8 self-center">
+            <h2 class="text-2xl uppercase"> Before & After </h2>
+            {{site.data.presets-settings.before-and-after-description_html}}
+        </div>
+
+    </div>
+</section>
+
+<section class="p-5p bg-stone-200">
+    <div class="grid sm:grid-cols-6 max-w-screen-xl mx-auto">
+
+        <div class="col-span-2 p-8 self-center">
+            <h2 class="text-2xl uppercase"> How to use your presets </h2>
+            {{site.data.presets-settings.presets-instructions_html}}
+        </div>
+        <div class="p-8 col-span-4">
+            {% include video.html 
+                vimeo-id=site.data.presets-settings.presets-instructions-vimeo-id %}
+        </div>
+
+    </div>
+</section> 

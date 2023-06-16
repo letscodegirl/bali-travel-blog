@@ -4,10 +4,24 @@ collections:
     permalink: /posts/:year/:slug
   archives:
     output: true
-    permalink: /:title
-  products:
+    permalink: /achives/:slug
+  products-presets:
     output: true
-    permalink: /shop/:title
+    permalink: /shop/presets/:slug
+  products-guides:
+    output: true
+    permalink: /shop/guides/:slug
+
+
+
+
+
+
+
+
+
+
+
 
 data_config:
   site-settings:
