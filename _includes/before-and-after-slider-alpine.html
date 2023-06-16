@@ -1,0 +1,49 @@
+<div x-data="slider()">
+  <div class="relative aspect-landscape mb-2" 
+       @mousedown="clicked = true" 
+       @mouseup="clicked = false" 
+       @mouseout="clicked = false" 
+       @mousemove="updateImageSlide($event)"
+       id="before-and-after-slider">
+
+      <!-- After image in the foreground  -->
+      <div class="absolute pointer-events-none inset-0 bg-image bg-cover bg-left" 
+           :style="`background-image:url('${afterImage}'); width: 50vw;`" 
+           id="after-image"></div>
+
+      <!-- Before image in the background -->
+      <div class="absolute pointer-events-none inset-0 bg-image bg-left w-1/2 border-r-4 border-white" 
+           :style="`background-image:url('${beforeImage}'); width: ${sliderWidth}px;`" 
+           id="before-image"></div>
+       
+  </div>
+  <div class="grid grid-cols-6 gap-2" id="alt-image-grid">
+      {% for image in page.comparison-images %}
+          <div class="col-span-1 aspect-landscape relative">
+              <img :src="{{image.before-image}}" 
+                   @click="changeImage('{{image.before-image}}', '{{image.after-image}}')"
+                   class="absolute inset-0 object-cover object-center h-full w-full">
+          </div>
+      {% endfor %}
+  </div>
+</div>
+
+<script>
+function slider() {
+  return {
+      clicked: false,
+      sliderWidth: 0,
+      beforeImage: '{{page.comparison-images[0].before-image}}',
+      afterImage: '{{page.comparison-images[0].after-image}}',
+      updateImageSlide(e) {
+          if (this.clicked) {
+              this.sliderWidth = e.offsetX;
+          }
+      },
+      changeImage(before, after) {
+          this.beforeImage = before;
+          this.afterImage = after;
+      }
+  }
+}
+</script>
