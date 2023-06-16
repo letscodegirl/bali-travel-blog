@@ -2,25 +2,20 @@
     <div class="relative aspect-landscape mb-2" id="before-and-after-slider">
 
         <!-- After image in the foreground  -->
-        <div class="absolute pointer-events-none inset-0 bg-image bg-[length:50vw] bg-cover bg-left" id="after-image"
+        <div class="absolute pointer-events-none inset-0 bg-image bg-cover bg-center" id="focus-image"
              style="background-image:url('{{page.comparison-images[0].after-image}}')"></div>
 
-        <!-- Before image in the background -->
-        <div class="absolute pointer-events-none inset-0 bg-image bg-[length:50vw] bg-left w-1/2 border-r-4 border-white" id="before-image"
-             style="background-image:url('{{page.comparison-images[0].before-image}}')"></div>
-         
     </div>
     <div class="grid grid-cols-6 gap-2" id="alt-image-grid">
         {% for image in page.comparison-images %}
         
         <div class="col-span-1 aspect-landscape relative">
-            <img src="{{image.before-image}}" data-pre-image="{{image.after-image}}"
+            <img src="{{image.before-image}}"
                 class="absolute inset-0 object-cover object-center h-full w-full">
         </div>
         {% endfor %}
     </div>
 </div>
-
 
 
 <!-- Essential Javascript-->
@@ -29,31 +24,7 @@
 <script src="https://unpkg.com/gsap@3.12.1/dist/gsap.min.js"></script>
 <script>
 
-const sliderContainer = document.querySelector('#before-and-after-slider')
-
-function updateImageSlide(e){
-  if(sliderContainer.classList.contains('clicked')){
-    console.log(e.offsetX)
-    gsap.set("#before-image", {
-      width: `${e.offsetX}px`
-    });
-  }
-}
-
-sliderContainer.addEventListener('mousedown',(e) => {
-  sliderContainer.classList.add('clicked')
-  updateImageSlide(e)
-})
-sliderContainer.addEventListener('mouseup',() => {
-  sliderContainer.classList.remove('clicked')
-})
-sliderContainer.addEventListener('mouseout',() => {
-  sliderContainer.classList.remove('clicked')
-})
-
-sliderContainer.addEventListener('mousemove',(e) => {
-  updateImageSlide(e)
-})
+const sliderContainer = document.querySelector('#thumbnail-gallery')
 
 //   
 
@@ -69,11 +40,8 @@ const altImages = altImageGrid.querySelectorAll('img')
 altImages.forEach(img => {
   img.addEventListener('click', () => {
     console.log(img.src,img.dataset.priImage)
-    gsap.set('#before-image',{
+    gsap.set('#focus-image',{
       backgroundImage: `url('${img.src}')`
-    })
-    gsap.set('#after-image',{
-      backgroundImage: `url('${img.dataset.preImage}')`
     })
   })
 });
