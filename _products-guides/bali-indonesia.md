@@ -5,19 +5,19 @@ title: Bali Indonesia
 subtitle: Welcome to the island of the gods
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id quod corporis magni ipsam omnis labore sit commodi cum. Quos, consequatur accusantium? Ut corporis qui architecto. Labore nisi alias placeat.
 price: 25
-featured-image: /uploads/travel/travel-6.jpg
+featured-image: /uploads/guides/guide-1.png
 gallery: 
-  - image: /uploads/presets/ocean-blues-before-1.jpg
+  - image: /uploads/guides/guide-1.png
     alt-text: a short description
-  - image: /uploads/presets/ocean-blues-before-2.jpg
+  - image: /uploads/guides/guide-2.png
     alt-text: a short description
-  - image: /uploads/presets/ocean-blues-before-3.jpg
+  - image: /uploads/guides/guide-3.png
     alt-text: a short description
-  - image: /uploads/presets/ocean-blues-before-4.jpg
+  - image: /uploads/guides/guide-1.png
     alt-text: a short description
-  - image: /uploads/presets/ocean-blues-before-5.jpg
+  - image: /uploads/guides/guide-2.png
     alt-text: a short description
-  - image: /uploads/presets/ocean-blues-before-6.jpg
+  - image: /uploads/guides/guide-3.png
     alt-text: a short description
 table-of-contents: 
   - title: Where to eat
