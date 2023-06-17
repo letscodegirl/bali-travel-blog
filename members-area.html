@@ -1,7 +1,33 @@
 ---
 layout: default
+members-content: 
+    - title: This is a title
+      content_html: some content 
+    - title: This is a second title 
+      content_html: some content 
+    - title: This is a third title 
+      content_html: some content
 ---
 
-<section class="min-h-80 p-5p"> 
-    Put your secret things here! 
+<section class="min-h-80 p-5p grid grid-cols-4">
+
+    <div class="col-span-1">
+
+            {% for item in page.members-content %}
+            <a href="#{{item.title | slugify }}" class="block"> {{item.title}}</a>
+            {% endfor %}
+
+    </div> 
+
+    <div class="col-span-3">
+
+        {% for item in page.members-content %}
+        <div id="{{item.title | slugify}}" class="p-5p border-b-2"> 
+            {{ item.content_html }}
+        </div>
+
+        {% endfor %}
+
+    </div> 
+    
 </section>
