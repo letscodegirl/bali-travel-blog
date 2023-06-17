@@ -5,6 +5,7 @@ title: Bali Indonesia
 subtitle: Welcome to the island of the gods
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id quod corporis magni ipsam omnis labore sit commodi cum. Quos, consequatur accusantium? Ut corporis qui architecto. Labore nisi alias placeat.
 price: 25
+buy-button-id: 1686971064446
 featured-image: /uploads/guides/guide-1.png
 gallery: 
   - image: /uploads/guides/guide-1.png
