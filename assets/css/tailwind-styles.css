@@ -1101,6 +1101,9 @@ a {
 .max-w-lg {
   max-width: 32rem;
 }
+.max-w-screen-md {
+  max-width: 768px;
+}
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -1263,6 +1266,9 @@ a {
 .bg-\[length\:50vw\] {
   background-size: 50vw;
 }
+.bg-fixed {
+  background-attachment: fixed;
+}
 .bg-bottom {
   background-position: bottom;
 }
@@ -1407,6 +1413,9 @@ a {
 }
 .leading-\[0\.9\] {
   line-height: 0.9;
+}
+.leading-none {
+  line-height: 1;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
