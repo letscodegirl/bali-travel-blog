@@ -1223,6 +1223,12 @@ a {
 .border-b-2 {
   border-bottom-width: 2px;
 }
+.border-t-2 {
+  border-top-width: 2px;
+}
+.border-l-2 {
+  border-left-width: 2px;
+}
 .border-slate-600 {
   --tw-border-opacity: 1;
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
@@ -1238,6 +1244,10 @@ a {
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-stone-100 {
   --tw-bg-opacity: 1;
@@ -1262,6 +1272,30 @@ a {
 .bg-zinc-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+.bg-\[url\(\'\/uploads\/guides\/guide-1\.png\'\)\] {
+  background-image: url('/uploads/guides/guide-1.png');
+}
+.bg-\[url\(\'\/uploads\/guides\/guide-2\.png\'\)\] {
+  background-image: url('/uploads/guides/guide-2.png');
+}
+.bg-\[url\(\'\/uploads\/guides\/guide-3\.png\'\)\] {
+  background-image: url('/uploads/guides/guide-3.png');
+}
+.bg-\[url\(\'\/uploads\/travel\/travel-2\.jpg\'\)\] {
+  background-image: url('/uploads/travel/travel-2.jpg');
+}
+.bg-\[url\(\'\/uploads\/travel\/travel-4\.jpg\'\)\] {
+  background-image: url('/uploads/travel/travel-4.jpg');
+}
+.bg-\[url\(\'\/uploads\/travel\/travel-5\.jpg\'\)\] {
+  background-image: url('/uploads/travel/travel-5.jpg');
+}
+.bg-\[url\(\'\/uploads\/travel\/travel-6\.jpg\'\)\] {
+  background-image: url('/uploads/travel/travel-6.jpg');
+}
+.bg-\[url\(\'\/uploads\/travel\/travel-7\.jpg\'\)\] {
+  background-image: url('/uploads/travel/travel-7.jpg');
 }
 .bg-cover {
   background-size: cover;
@@ -1455,6 +1489,11 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 .duration-700 {
   transition-duration: 700ms;
 }
@@ -1490,6 +1529,26 @@ a {
   background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-\[url\(\'\/uploads\/guides\/guide-2\.png\'\)\]:hover {
+  background-image: url('/uploads/guides/guide-2.png');
+}
+
+.hover\:bg-\[url\(\'\/uploads\/guides\/guide-3\.png\'\)\]:hover {
+  background-image: url('/uploads/guides/guide-3.png');
+}
+
+.hover\:bg-\[url\(\'\/uploads\/travel\/travel-5\.jpg\'\)\]:hover {
+  background-image: url('/uploads/travel/travel-5.jpg');
+}
+
+.hover\:bg-\[url\(\'\/uploads\/travel\/travel-6\.jpg\'\)\]:hover {
+  background-image: url('/uploads/travel/travel-6.jpg');
+}
+
+.hover\:bg-\[url\(\'\/uploads\/travel\/travel-7\.jpg\'\)\]:hover {
+  background-image: url('/uploads/travel/travel-7.jpg');
+}
+
 .hover\:text-rose-600:hover {
   --tw-text-opacity: 1;
   color: rgb(225 29 72 / var(--tw-text-opacity));
@@ -1503,6 +1562,10 @@ a {
 .hover\:text-stone-600:hover {
   --tw-text-opacity: 1;
   color: rgb(87 83 78 / var(--tw-text-opacity));
+}
+
+.hover\:opacity-0:hover {
+  opacity: 0;
 }
 
 .group:hover .group-hover\:w-12 {

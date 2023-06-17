@@ -9,20 +9,20 @@ members-content:
       content_html: some content
 ---
 
-<section class="min-h-80 p-5p grid grid-cols-4">
+<section class="min-h-80 grid grid-cols-4 border-t-2 border-b-2 border-black">
 
-    <div class="col-span-1">
+    <div class="col-span-1 p-4">
 
             {% for item in page.members-content %}
-            <a href="#{{item.title | slugify }}" class="block"> {{item.title}}</a>
+            <a href="#{{item.title | slugify }}" class="block uppercase font-bold"> {{item.title}}</a>
             {% endfor %}
 
     </div> 
 
-    <div class="col-span-3">
+    <div class="col-span-3 border-l-2 border-black">
 
         {% for item in page.members-content %}
-        <div id="{{item.title | slugify}}" class="p-5p border-b-2"> 
+        <div id="{{item.title | slugify}}" class="p-5p border-b-2 border-black"> 
             {{ item.content_html }}
         </div>
 

@@ -1,6 +1,7 @@
+
 <a class="p-2 block" href="{{ product.url }}">
-    <div class="aspect-square relative">
-        <img src="{{ product.featured-image }}" alt="{{product.title}}" class="absolute inset-0 w-full h-full object-cover object-center">
+    <div class="aspect-square bg-[url('{{ product.hover-image }}')] bg-cover bg-center relative">
+        <img src="{{ product.featured-image }}" alt="{{product.title}}" class="hover:opacity-0 transition-opacity absolute inset-0 w-full h-full object-cover object-center">
     </div>
     <div class="p-8 relative bg-stone-100">
         
@@ -11,4 +12,3 @@
 
     </div>
 </a>
-

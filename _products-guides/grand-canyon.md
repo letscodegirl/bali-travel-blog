@@ -1,14 +1,14 @@
 ---
 layout: product-travel-guides
-slug: melbourne-australia
-title: Melbourne Australia
+slug: grand-canyon
+title: Grand Canyon
 subtitle: Perfect for your summer down under
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id quod corporis magni ipsam omnis labore sit commodi cum. Quos, consequatur accusantium? Ut corporis qui architecto. Labore nisi alias placeat.
 type: travel guide
 price: 25
 buy-button-id: 6132597457074
-featured-image: /uploads/guides/guide-2.png
-hover-image: /uploads/guides/guide-3.png
+featured-image: /uploads/guides/guide-3.png
+hover-image: /uploads/guides/guide-2.png
 gallery: 
   - image: /uploads/guides/guide-1.png
     alt-text: a short description

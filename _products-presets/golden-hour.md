@@ -1,13 +1,13 @@
 ---
 layout: product-presets
-slug: desert-glow
-title: Desert Glow
+slug: golden-hour
+title: Golden Hour
 subtitle: Perfect for your summer in Europe
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id quod corporis magni ipsam omnis labore sit commodi cum. Quos, consequatur accusantium? Ut corporis qui architecto. Labore nisi alias placeat.
 type: preset
 price: 25
-featured-image: /uploads/travel/travel-6.jpg
-hover-image: /uploads/travel/travel-7.jpg
+featured-image: /uploads/travel/travel-4.jpg
+hover-image: /uploads/travel/travel-5.jpg
 comparison-images: 
     - before-image: /uploads/presets/ocean-blues-before-1.jpg
       after-image: /uploads/presets/ocean-blues-after-1.jpg
