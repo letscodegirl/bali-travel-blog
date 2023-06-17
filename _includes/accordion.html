@@ -1,0 +1,44 @@
+<div class="border-b border-zinc-800" x-data="{ selected: null }">
+
+        {% for item in include.accordion-source %}
+
+            <div class="relative border-t border-zinc-800">
+
+                <button type="button" class="py-6 block w-full" 
+                        @click="selected !== {{ forloop.index }} ? selected = {{ forloop.index }} : selected = null">
+                    <div class="flex items-center justify-between">
+                        <h4 class="mb-0 uppercase tracking-wide font-sans">{{ item.title }}</h4>
+                        <span> + </span>
+                    </div>
+                </button>
+
+                <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container{{ forloop.index }}" x-bind:style="selected == {{ forloop.index }} ? 'max-height: ' + $refs.container{{ forloop.index }}.scrollHeight + 'px' : ''">
+                    <div class="pb-6">
+                        <p class="mb-0">{{ item.description }}</p>
+                    </div>
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+</div>
+
+<!-- 
+
+    Alpine.js is a minimal JavaScript framework that provides the reactive and declarative nature of big frameworks like Vue or React at a much lower cost. It's designed to be dropped into existing pages to provide a sprinkle of interactivity.
+
+Here's a breakdown of what the Alpine.js code is doing in this accordion example:
+
+    x-data="{ selected: null }": This directive initializes a new Alpine.js component and declares its data object. In this case, the data object has one property, selected, which is initially set to null. This property is used to track which accordion item is currently open.
+
+    @click="selected !== {{ forloop.index }} ? selected = {{ forloop.index }} : selected = null": This directive adds a click event listener to the button. When the button is clicked, it checks if the selected property is not equal to the current loop index. If it's not, it sets selected to the current loop index, which opens the accordion item. If it is, it sets selected to null, which closes the accordion item.
+
+    x-ref="container{{ forloop.index }}": This directive creates a reference to the div element. This reference can be used in expressions to access the properties of the div, like its scroll height.
+
+    x-bind:style="selected == {{ forloop.index }} ? 'max-height: ' + $refs.container{{ forloop.index }}.scrollHeight + 'px' : ''": This directive binds the style attribute of the div to a JavaScript expression. The expression checks if the selected property is equal to the current loop index. If it is, it sets the max-height style of the div to its scroll height, which opens the accordion item. If it's not, it sets the max-height style to 0, which closes the accordion item.
+
+    In summary, the Alpine.js code in this example provides the interactivity of the accordion. It tracks which accordion item is open and updates the styles of the items when they are clicked to open or close them.
+
+
+ -->

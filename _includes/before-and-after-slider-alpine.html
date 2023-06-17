@@ -47,3 +47,68 @@ function slider() {
   }
 }
 </script>
+
+
+{% comment %}
+<!-- V2 with input slider -->
+
+<div class="relative aspect-landscape mb-2" x-data="slider()" id="before-and-after-slider">
+  <!-- After image in the foreground  -->
+  <div class="absolute inset-0 bg-cover bg-left" 
+       :style="`background-image:url('${afterImage}'); width: ${sliderValue}%;`"></div>
+
+  <!-- Before image in the background -->
+  <div class="absolute inset-0 bg-cover bg-left" 
+       :style="`background-image:url('${beforeImage}');`"></div>
+
+  <!-- Slider input -->
+  <input type="range" min="0" max="100" x-model="sliderValue" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+</div>
+
+<div class="grid grid-cols-6 gap-2 mt-2">
+  {% for image in page.comparison-images %}
+      <div class="col-span-1 aspect-landscape relative">
+          <img :src="{{image.before-image}}" 
+               @click="changeImage('{{image.before-image}}', '{{image.after-image}}')"
+               class="absolute inset-0 object-cover object-center h-full w-full cursor-pointer">
+      </div>
+  {% endfor %}
+</div>
+
+<script>
+function slider() {
+  return {
+      sliderValue: 50,
+      beforeImage: '{{page.comparison-images[0].before-image}}',
+      afterImage: '{{page.comparison-images[0].after-image}}',
+      changeImage(before, after) {
+          this.beforeImage = before;
+          this.afterImage = after;
+      }
+  }
+}
+</script>
+
+
+
+In this code:
+
+  The x-data attribute on the outer div initializes the Alpine.js component with the slider function. This function returns an object that represents the component's state and methods.
+  The before-image and after-image divs display the before and after images. The :style directive is used to bind their background-image and width styles to the beforeImage, afterImage, and sliderValue state variables.
+  The input element is a range slider that controls the width of the after image. The x-model directive is used to bind its value to the sliderValue state variable.
+  The Liquid for loop is used to generate the alternative images. The @click directive on each img element calls the changeImage method when the user clicks on the image, passing the image's before and after URLs as arguments.
+  The slider function defines the component's state and methods. The sliderValue state variable is used to control the width of the after image, and the changeImage method is used to change the before and after images.
+
+
+{% endcomment %}
+
+<!-- 
+
+
+In this code:
+
+    The x-data attribute on the outer div initializes the Alpine.js component with the slider function. This function returns an object that represents the component's state and methods.
+    The before-image and after-image divs display the before and after images. The :style directive is used to bind their background-image and width styles to the beforeImage, afterImage, and sliderValue state variables.
+    The input element is a range slider that controls the width of the after image. The x-model directive is used to bind its value to the sliderValue state variable.
+    The Liquid for loop is used to generate the alternative images. The @click directive on each img element calls the changeImage method when the user clicks on the image, passing the image's before and after URLs as arguments.
+    The slider function defines the component's state and methods. The sliderValue state variable is used to control the width of the after image, and the changeImage method is used to change the before and after images. -->

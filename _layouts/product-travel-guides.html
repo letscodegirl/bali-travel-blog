@@ -4,7 +4,7 @@ layout: default
 
 <section class="max-w-screen-xl mx-auto"> 
     <div class="grid grid-cols-2 gap-4 min-h-70">
-        <div class="py-12 self-end max-w-lg">
+        <div class="py-12 self-end max-w-lg px-8 xl:px-0">
             <h1 class="text-6xl">{{page.title}}</h1>
             <h2 class="text-2xl uppercase"> {{page.subtitle}}</h2>
             <p class="mb-6"> {{page.description}} </p>
@@ -19,8 +19,8 @@ layout: default
 <!-- What's inside  -->
 
 <section class="bg-stone-100 p-5p">
-    <h2 class="text-2xl uppercase text-center"> Thumbnail Gallery </h2>
-    <div class="grid grid-cols-5 max-w-screen-xl mx-auto">
+    <h2 class="text-4xl uppercase text-center"> Thumbnail Gallery </h2>
+    <div class="max-w-screen-xl mx-auto">
 
             {% include thumbnail-gallery.html %}
 
@@ -46,15 +46,27 @@ layout: default
     </div>
 </section> 
 
+
 <!-- Frequently Asked Questions -->
-<section class="p-5p bg-stone-200">
-    <div class="max-w-screen-xl mx-auto">
+<section class="p-5p bg-stone-100">
+    
+    <div class="max-w-screen-xl mx-auto grid grid-cols-5 gap-12">
 
+        <div class="col-span-3">
+            <h2 class="text-4xl mb-2"> Table of Contents </h2>
+            <div>
+                {% include accordion.html 
+                    accordion-source=page.table-of-contents %}
+            </div>
+        </div>
 
-
-
+        <div class="col-span-2">
+                <h2 class="text-4xl mb-2"> What's included: </h2>
+                {{ page.whats-included_html }}
+        </div> 
     </div>
 </section>
+
 
 <!-- Related Products -->
 
@@ -62,9 +74,9 @@ layout: default
     <h2 class="text-4xl uppercase tracking-wide text-center"> Related Products </h2>
     <div class="grid sm:grid-cols-3 max-w-screen-xl mx-auto">
 
-        {% for product in site.products-presets %}
+        {% for product in site.products-guides %}
 
-             {% include product-loop-item.html type='presets'%}
+             {% include product-loop-item.html type='travel guides'%}
 
         {% endfor %}
 

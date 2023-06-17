@@ -10,12 +10,24 @@ layout: default
 	
 		{% for product in site.products-presets %}
 		
-		<a href="{{product.url}}"> 
-			<img src="{{product.after-image}}">
-			<h4> {{product.title}}</h4>
-			<p> {{product.price}}</p>
-        </a>
+			{% include product-loop-item.html %}
+
+	    {% endfor %}
 	
+	</div>
+	
+</section>
+
+<section class="p-8 max-w-screen-xl mx-auto">
+
+	<h2> Shop all travel guides </h2> 
+	
+	<div class="grid grid-cols-3 gap-4">
+	
+		{% for product in site.products-guides %}
+		
+			{% include product-loop-item.html %}
+			
 	    {% endfor %}
 	
 	</div>

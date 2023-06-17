@@ -1,49 +1,33 @@
-<div>
-    <div class="relative aspect-landscape mb-2" id="before-and-after-slider">
+<div x-data="{ mainImage: '{{ page.gallery[0].image }}' }" class="grid grid-cols-6 gap-2">
+  <!-- Main image -->
+  <div class="col-span-full aspect-landscape relative">
+      <div class="absolute inset-0 bg-cover bg-center" 
+           :style="`background-image:url('${mainImage}');`">
+      </div>
+  </div>
 
-        <!-- After image in the foreground  -->
-        <div class="absolute pointer-events-none inset-0 bg-image bg-cover bg-center" id="focus-image"
-             style="background-image:url('{{page.comparison-images[0].after-image}}')"></div>
-
-    </div>
-    <div class="grid grid-cols-6 gap-2" id="alt-image-grid">
-        {% for image in page.comparison-images %}
-        
-        <div class="col-span-1 aspect-landscape relative">
-            <img src="{{image.before-image}}"
-                class="absolute inset-0 object-cover object-center h-full w-full">
-        </div>
-        {% endfor %}
-    </div>
+  <!-- Thumbnails -->
+  {% for image in page.gallery %}
+      <div class="col-span-1 aspect-landscape relative">
+          <div class="absolute inset-0 bg-cover bg-center cursor-pointer" 
+               :style="`background-image:url('{{ image.image }}');`" 
+               @click="mainImage = '{{ image.image }}'">
+          </div>
+      </div>
+  {% endfor %}
 </div>
 
 
-<!-- Essential Javascript-->
+<!-- 
 
+In this code:
 
-<script src="https://unpkg.com/gsap@3.12.1/dist/gsap.min.js"></script>
-<script>
+    The x-data directive is initializing an Alpine.js component with a data object that has one property: mainImage. This property is initially set to the URL of the first image in the page.gallery array.
 
-const sliderContainer = document.querySelector('#thumbnail-gallery')
+    The :style directive is binding the style attribute of the div tag to a string of CSS that uses the mainImage property. This means that the style attribute will dynamically update to reflect the current value of mainImage.
 
-//   
+    The @click directive is adding a click event listener to the div tag. When the div is clicked, it sets the mainImage property to the URL of the clicked image.
 
-// Open your HTML file in a web browser, and you should now have a slider that adjusts its width based on the mouse position.
+    This is a very basic example and doesn't include any transitions or animations. You might want to add those for a smoother user experience.
 
-// By following these beginner-friendly instructions, you should be able to successfully implement the provided GSAP functionality for the slider on your web page.
-
-
-// change image functionality
-const altImageGrid = document.querySelector('#alt-image-grid')
-const altImages = altImageGrid.querySelectorAll('img')
-
-altImages.forEach(img => {
-  img.addEventListener('click', () => {
-    console.log(img.src,img.dataset.priImage)
-    gsap.set('#focus-image',{
-      backgroundImage: `url('${img.src}')`
-    })
-  })
-});
-
-</script> 
+ -->

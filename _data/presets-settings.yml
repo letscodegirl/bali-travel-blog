@@ -1,3 +1,12 @@
 before-and-after-description_html: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id quod corporis magni ipsam omnis labore sit commodi cum. Quos, consequatur accusantium? Ut corporis qui architecto. Labore nisi alias placeat.
 presets-instructions_html: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, id quod corporis magni ipsam omnis labore sit commodi cum. Quos, consequatur accusantium? Ut corporis qui architecto. Labore nisi alias placeat.
 presets-instructions-vimeo-id: 663318015
+faqs: 
+  - title: This is a question
+    description: This is an answer that's only shown when you click on it. 
+  - title: This is another question
+    description: This is an answer that's only shown when you click on it. 
+  - title: This is one more question
+    description: This is an answer that's only shown when you click on it. 
+  - title: And again, I'm not even bored
+    description: This is an answer that's only shown when you click on it. 

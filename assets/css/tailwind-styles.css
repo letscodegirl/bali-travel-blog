@@ -946,6 +946,9 @@ a {
 .col-span-4 {
   grid-column: span 4 / span 4;
 }
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
 .m-0 {
   margin: 0px;
 }
@@ -999,6 +1002,9 @@ a {
 .mb-6 {
   margin-bottom: 1.5rem;
 }
+.mt-2 {
+  margin-top: 0.5rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1037,6 +1043,9 @@ a {
 }
 .h-full {
   height: 100%;
+}
+.max-h-0 {
+  max-height: 0px;
 }
 .min-h-60 {
   min-height: 60vh;
@@ -1092,6 +1101,15 @@ a {
 .shrink-0 {
   flex-shrink: 0;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
+.list-inside {
+  list-style-position: inside;
+}
+.list-disc {
+  list-style-type: disc;
+}
 .break-inside-avoid {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
@@ -1137,6 +1155,12 @@ a {
 }
 .gap-4 {
   gap: 1rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.gap-12 {
+  gap: 3rem;
 }
 .self-end {
   align-self: flex-end;
@@ -1184,6 +1208,12 @@ a {
 .border-r-4 {
   border-right-width: 4px;
 }
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
+}
 .border-slate-600 {
   --tw-border-opacity: 1;
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
@@ -1195,6 +1225,10 @@ a {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 .bg-stone-100 {
   --tw-bg-opacity: 1;
@@ -1295,11 +1329,25 @@ a {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .pt-6 {
   padding-top: 1.5rem;
 }
 .pr-8 {
   padding-right: 2rem;
+}
+.pt-0 {
+  padding-top: 0px;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 .text-center {
   text-align: center;
@@ -1383,6 +1431,17 @@ a {
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 
@@ -1494,5 +1553,12 @@ a {
 @media (min-width: 1024px) {
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

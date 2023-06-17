@@ -4,7 +4,7 @@ layout: default
 
 <section class="max-w-screen-xl mx-auto"> 
     <div class="grid grid-cols-2 gap-4 min-h-70">
-        <div class="py-12 self-end max-w-lg">
+        <div class="py-12 self-end max-w-lg px-8 xl:px-0">
             <h1 class="text-6xl">{{page.title}}</h1>
             <h2 class="text-2xl uppercase"> {{page.subtitle}}</h2>
             <p class="mb-6"> {{page.description}} </p>
@@ -31,20 +31,6 @@ layout: default
     </div>
 </section>
 
-<section class="bg-stone-100 p-5p">
-    <div class="grid grid-cols-5 max-w-screen-xl mx-auto">
-        <div class="col-span-3 p-8">
-
-            {% include before-and-after-slider-alpine.html %}
-
-        </div>
-        <div class="col-span-2 p-8 self-center">
-            <h2 class="text-2xl uppercase"> Before & After - WITH ALPINE.JS </h2>
-            {{site.data.presets-settings.before-and-after-description_html}}
-        </div>
-
-    </div>
-</section>
 
 <section class="p-5p bg-stone-200">
     <div class="grid sm:grid-cols-6 max-w-screen-xl mx-auto">
@@ -65,7 +51,8 @@ layout: default
 <section class="p-5p bg-stone-200">
     <div class="max-w-screen-xl mx-auto">
 
-
+        {% include accordion.html 
+            faq-source=site.data.presets-settings.faqs %}
 
     </div>
 </section>

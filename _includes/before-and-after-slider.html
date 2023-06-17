@@ -23,59 +23,82 @@
 
 
 
+
 <!-- Essential Javascript-->
 
-
 <script src="https://unpkg.com/gsap@3.12.1/dist/gsap.min.js"></script>
+
 <script>
 
-const sliderContainer = document.querySelector('#before-and-after-slider')
+// Select the slider container and the alternative image grid
+const sliderContainer = document.querySelector('#before-and-after-slider');
+const altImageGrid = document.querySelector('#alt-image-grid');
 
-function updateImageSlide(e){
-  if(sliderContainer.classList.contains('clicked')){
-    console.log(e.offsetX)
+// Function to update the width of the before image based on the mouse position
+function updateImageSlide(e) {
+  if (sliderContainer.classList.contains('clicked')) {
     gsap.set("#before-image", {
       width: `${e.offsetX}px`
     });
   }
 }
 
-sliderContainer.addEventListener('mousedown',(e) => {
-  sliderContainer.classList.add('clicked')
-  updateImageSlide(e)
-})
-sliderContainer.addEventListener('mouseup',() => {
-  sliderContainer.classList.remove('clicked')
-})
-sliderContainer.addEventListener('mouseout',() => {
-  sliderContainer.classList.remove('clicked')
-})
-
-sliderContainer.addEventListener('mousemove',(e) => {
-  updateImageSlide(e)
-})
-
-//   
-
-// Open your HTML file in a web browser, and you should now have a slider that adjusts its width based on the mouse position.
-
-// By following these beginner-friendly instructions, you should be able to successfully implement the provided GSAP functionality for the slider on your web page.
-
-
-// change image functionality
-const altImageGrid = document.querySelector('#alt-image-grid')
-const altImages = altImageGrid.querySelectorAll('img')
-
-altImages.forEach(img => {
-  img.addEventListener('click', () => {
-    console.log(img.src,img.dataset.priImage)
-    gsap.set('#before-image',{
-      backgroundImage: `url('${img.src}')`
-    })
-    gsap.set('#after-image',{
-      backgroundImage: `url('${img.dataset.preImage}')`
-    })
-  })
+// Add event listeners to the slider container
+sliderContainer.addEventListener('mousedown', (e) => {
+  sliderContainer.classList.add('clicked');
+  updateImageSlide(e);
 });
+sliderContainer.addEventListener('mouseup', () => sliderContainer.classList.remove('clicked'));
+sliderContainer.addEventListener('mouseout', () => sliderContainer.classList.remove('clicked'));
+sliderContainer.addEventListener('mousemove', updateImageSlide);
 
-</script> 
+// Add a single event listener to the alternative image grid for event delegation
+altImageGrid.addEventListener('click', (e) => {
+  // Check if the clicked element is an image
+  if (e.target.tagName === 'IMG') {
+    const img = e.target;
+    gsap.set('#before-image', {
+      backgroundImage: `url('${img.src}')`
+    });
+    gsap.set('#after-image', {
+      backgroundImage: `url('${img.dataset.preImage}')`
+    });
+  }
+});
+</script>
+
+
+<!-- 
+
+        const sliderContainer = document.querySelector('#before-and-after-slider');
+    This line is selecting the slider container element from the DOM and storing it in the sliderContainer variable for later use.
+
+    const altImageGrid = document.querySelector('#alt-image-grid');
+    Similarly, this line is selecting the alternative image grid element from the DOM and storing it in the altImageGrid variable.
+
+    function updateImageSlide(e) {...}
+    This function is responsible for updating the width of the before image based on the mouse's x-position (e.offsetX). It first checks if the clicked class is present on the sliderContainer (which indicates that the mouse button is pressed down). If it is, it changes the width of the before image to match the mouse's x-position.
+
+    sliderContainer.addEventListener('mousedown', (e) => {...});
+    This line adds an event listener to the sliderContainer that listens for mousedown events (when the mouse button is pressed down). When a mousedown event occurs, it adds the clicked class to the sliderContainer and calls the updateImageSlide function.
+
+    sliderContainer.addEventListener('mouseup', () => sliderContainer.classList.remove('clicked'));
+    This line adds an event listener that listens for mouseup events (when the mouse button is released). When a mouseup event occurs, it removes the clicked class from the sliderContainer.
+
+    sliderContainer.addEventListener('mouseout', () => sliderContainer.classList.remove('clicked'));
+    This line adds an event listener that listens for mouseout events (when the mouse cursor leaves the element). When a mouseout event occurs, it removes the clicked class from the sliderContainer.
+
+    sliderContainer.addEventListener('mousemove', updateImageSlide);
+    This line adds an event listener that listens for mousemove events (when the mouse cursor is moved). When a mousemove event occurs, it calls the updateImageSlide function.
+
+    function changeImage(e) {...}
+    This function is responsible for changing the before and after images when an image in the alternative image grid is clicked. It first checks if the clicked element is an image. If it is, it changes the background images of the before and after images to match the source and data-preImage attribute of the clicked image, respectively.
+
+    altImageGrid.addEventListener('click', changeImage);
+    This line adds an event listener to the altImageGrid that listens for click events. When a click event occurs, it calls the changeImage function.
+
+This code allows the user to reveal the before image by clicking and dragging the mouse on the slider container, and to change the before and after images by clicking on an image in the alternative image grid.
+
+
+
+ -->
