@@ -1,0 +1,33 @@
+---
+layout: default 
+banner-image: /uploads/travel/travel-25.jpg
+second-banner-image: /uploads/travel/travel-18.jpg
+---
+
+
+<section class="p-5p max-w-screen-xl mx-auto" x-data="{ filter: 'all' }">
+
+	<h2 class="text-center text-4xl mb-4"> Shop all products </h2> 
+
+	<div class="filter"> 
+		<a href="#" @click.prevent="filter = 'all'">All</a>
+        <a href="#" @click.prevent="filter = 'travel-guide'">Travel Guides</a>
+        <a href="#" @click.prevent="filter = 'preset'">Presets </a>
+	</div>
+	
+
+	<div class="grid grid-cols-3 gap-4">
+
+	{% assign all_products = site.products-guides | concat: site.products-presets | sort: 'title'  %}
+
+	{% for product in all_products %}
+		
+		<div class="{{product.type | slugify }}" x-show="filter === 'all' || filter === '{{ product.type | slugify }}'">
+		{% include product-loop-item.html type=product.type  %}
+		</div>
+			
+	{% endfor %}
+
+	</div>
+
+</section>

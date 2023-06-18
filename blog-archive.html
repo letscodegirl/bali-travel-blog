@@ -3,41 +3,25 @@ layout: default
 title: Blog Archive
 ---
 
-<!------------------------ Split blog loop (part 1) ------------------------>
-<section class="p-5p archive">
-
+<section class="p-5p archive" x-data="{ search: '', posts: [...document.querySelectorAll('.post')] }" x-on:input="filterPosts">
     <div class="max-w-screen-lg mx-auto p-2 center mb-8 text-center">
-        <h2 class="font-serif text-4xl mb-2"> Blog Archive - Option 1 </h2>
+        <h2 class="font-serif text-4xl mb-2"> Search the blog </h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat necessitatibus? Praesentium fugit ex neque magni, possimus, iste itaque voluptatem id doloremque voluptas consequatur dolor cumque! Dolores possimus laboriosam adipisci.</p>
+   
+        <div class="filter"> 
+            <input type="text" x-model="search" placeholder="Search posts...">
+        </div>
     </div>
 
-    <div class="max-w-screen-xl mx-auto grid lg:grid-cols-2 gap-4">
+    <div class="max-w-screen-lg mx-auto">
 
-        {% for post in site.posts limit:10 %}
+        {% for post in site.posts limit:100 %}
 
+        <div class="post" x-show="search === '' || $el.querySelector('h2').textContent.toLowerCase().includes(search.toLowerCase())">
             {% include post-loop-item-simple.html %}
+        </div>
 
         {% endfor %}
-
     </div>
-
 </section>
 
-<section class="p-5p archive">
-
-    <div class="max-w-screen-lg mx-auto p-2 center mb-8 text-center">
-        <h2 class="font-serif text-4xl mb-2"> Blog Archive - Option 2 </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat necessitatibus? Praesentium fugit ex neque magni, possimus, iste itaque voluptatem id doloremque voluptas consequatur dolor cumque! Dolores possimus laboriosam adipisci.</p>
-    </div>
-
-    <div class="max-w-screen-xl mx-auto grid gap-4">
-
-        {% for post in site.posts limit:10 %}
-
-            {% include post-loop-item-simple.html %}
-
-        {% endfor %}
-
-    </div>
-
-</section>
