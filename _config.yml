@@ -32,17 +32,17 @@ _structures:
         value: 
           _id: text
           content_html: 
-      # - label: CTA
-      #   icon: image
-      #   id-key: cta
-      #   value:
-      #     title: CTA
-      #     background-color:
-      #     text-color:
-      #     button-color:
-      #     heading:
-      #     button-url:
-      #     button-text:
+      - label: CTA
+        icon: image
+        id-key: cta
+        value:
+          title: CTA
+          background-color:
+          text-color:
+          button-color:
+          heading:
+          button-url:
+          button-text:
       # - label: Flexible Columns
       #   icon: image
       #   value:
