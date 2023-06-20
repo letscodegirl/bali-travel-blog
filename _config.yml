@@ -14,24 +14,7 @@ collections:
     permalink: /shop/guides/:slug
 
 
-
-_structures:
- 	blocks:
-    	values:
-      		- label: Banner
-          	  _id: banner
-          	  icon: image
-          	  value: 
-         		heading:
-         		sub-heading: 
-         		banner-image:  
-         	- label: Text
-          	_id: text
-          	icon: image
-          	content_html: 
-
-
-_structures:
+_array_structures:
   page_blocks:
     values:
     - label: Image Banner
