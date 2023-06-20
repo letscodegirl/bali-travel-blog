@@ -14,120 +14,133 @@ collections:
     permalink: /shop/guides/:slug
 
 
-page-blocks: []
+
+_structures:
+ 	blocks:
+    	values:
+      		- label: Banner
+          	  _id: banner
+          	  icon: image
+          	  value: 
+         		heading:
+         		sub-heading: 
+         		banner-image:  
+         	- label: Text
+          	_id: text
+          	icon: image
+          	content_html: 
+
 
 _structures:
   page_blocks:
     values:
-      - label: Banner
-        icon: image
-        id-key: banner
-        value:
-          heading: This is a heading
-          sub-heading: This is a sub-heading 
-          banner-image:  
-      - label: Text
-        icon: image
-        id-key: text
-        value: 
-          _id: text
-          content_html: 
-      - label: CTA
-        icon: image
-        id-key: cta
-        value:
-          title: CTA
-          background-color:
-          text-color:
-          button-color:
-          heading:
-          button-url:
-          button-text:
-      # - label: Flexible Columns
-      #   icon: image
-      #   value:
-      #     _id: flexible-columns
-      #     title: Flexible Columns
-      #     section-styles:
-      #     number-of-columns-mobile:
-      #     number-of-columns-desktop:
-      #     columns:
-      # - label: Gallery
-      #   icon: image
-      #   value:
-      #     _id: gallery
-      #     title: Flexible Columns
-      #     gallery-images:
+    - label: Image Banner
+      icon: image
+      value:
+        _id: banner
+        title: Image Banner
+        heading: This is your heading
+        sub-heading: And this is your sub-heading
+        banner-height: min-h-60
+        banner-image: /assets/images/placeholder.jpg
+        background-position: bg-center
+        text-position: items-center
+    - label: CTA
+      icon: image
+      value:
+        _id: cta
+        title: CTA
+        background-color:
+        text-color:
+        button-color:
+        heading:
+        button-url:
+        button-text:
+    - label: Flexible Columns
+      icon: image
+      value:
+        _id: flexible-columns
+        title: Flexible Columns
+        section-styles:
+        number-of-columns-mobile:
+        number-of-columns-desktop:
+        columns:
+    - label: Gallery
+      icon: image
+      value:
+        _id: gallery
+        title: Flexible Columns
+        gallery-images:
 
-#   gallery-images:
-#     label: Gallery Images
-#     icon: collections
-#     value:
-#       column-size: 1
-#       aspect-ratio: square
-#       image-path: /assets/images/placeholder.jpg
-#   columns:
-#     label: Columns
-#     icon: collections
-#     value:
-#       background-image:
-#       aspect-ratio:
-#       content_html:
+  gallery-images:
+    label: Gallery Images
+    icon: collections
+    value:
+      column-size: 1
+      aspect-ratio: square
+      image-path: /assets/images/placeholder.jpg
+  columns:
+    label: Columns
+    icon: collections
+    value:
+      background-image:
+      aspect-ratio:
+      content_html:
 
-# _inputs:
-#   cta-shortcode:
-#     type: select
-#     options:
-#       values:
-#         - web-dev
-#         - photography
-#       # data.site-settings.cta-shortcode
+_inputs:
+  cta-shortcode:
+    type: select
+    options:
+      values:
+        - web-dev
+        - photography
+      # data.site-settings.cta-shortcode
 
-#   banner-heights:
-#     - min-h-60
-#     - min-h-70
-#     - min-h-80
-#     - min-h-90
-#     - min-h-100
-#   background-positions:
-#     - bg-bottom
-#     - bg-center
-#     - bg-left
-#     - bg-right
-#     - bg-top
-#   text-positions:
-#     items-start: top
-#     items-center: middle
-#     items-end: bottom
-#   background-colors:
-#     - bg-light
-#     - bg-featured
-#     - bg-dark
-#     - none
-#   text-colors:
-#     - text-light
-#     - text-dark
-#     - text-featured
-#   button-colors:
-#     - btn-light
-#     - btn-dark
-#     - btn-featured
-#   number-of-columns-mobiles:
-#     - 1
-#     - 2
-#     - 3
-#   number-of-columns-dekstops:
-#     - 2
-#     - 3
-#     - 4
-#     - 5
-#     - 6
-#   aspect-ratios:
-#     aspect-portrait: portrait
-#     aspect-square: square
-#     aspect-landscape: landscape
-#   column-size:
-#     col-span-1: 1
-#     md/:col-span-2: 2
-#     md/:col-span-3: 3
-#     md/:col-span-4: 4
+  banner-heights:
+    - min-h-60
+    - min-h-70
+    - min-h-80
+    - min-h-90
+    - min-h-100
+  background-positions:
+    - bg-bottom
+    - bg-center
+    - bg-left
+    - bg-right
+    - bg-top
+  text-positions:
+    items-start: top
+    items-center: middle
+    items-end: bottom
+  background-colors:
+    - bg-light
+    - bg-featured
+    - bg-dark
+    - none
+  text-colors:
+    - text-light
+    - text-dark
+    - text-featured
+  button-colors:
+    - btn-light
+    - btn-dark
+    - btn-featured
+  number-of-columns-mobiles:
+    - 1
+    - 2
+    - 3
+  number-of-columns-dekstops:
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  aspect-ratios:
+    aspect-portrait: portrait
+    aspect-square: square
+    aspect-landscape: landscape
+  column-size:
+    col-span-1: 1
+    md/:col-span-2: 2
+    md/:col-span-3: 3
+    md/:col-span-4: 4
