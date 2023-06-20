@@ -14,9 +14,11 @@ collections:
     permalink: /shop/guides/:slug
 
 
+page-blocks: []
+
 _structures:
   page_blocks:
-    values:
+    options:
       - label: Image Banner
         icon: image
         id-key: banner
@@ -30,41 +32,32 @@ _structures:
         value: 
           _id: text
           content_html: 
-#       - label: CTA Global
-#         icon: image
-#         value:
-#           _id: cta-global
-#           title: CTA Global
-#           background-color:
-#           text-color:
-#           button-color:
-#           cta-shortcode:
-#       - label: CTA
-#         icon: image
-#         value:
-#           _id: cta
-#           title: CTA
-#           background-color:
-#           text-color:
-#           button-color:
-#           heading:
-#           button-url:
-#           button-text:
-#       - label: Flexible Columns
-#         icon: image
-#         value:
-#           _id: flexible-columns
-#           title: Flexible Columns
-#           section-styles:
-#           number-of-columns-mobile:
-#           number-of-columns-desktop:
-#           columns:
-#       - label: Gallery
-#         icon: image
-#         value:
-#           _id: gallery
-#           title: Flexible Columns
-#           gallery-images:
+      # - label: CTA
+      #   icon: image
+      #   id-key: cta
+      #   value:
+      #     title: CTA
+      #     background-color:
+      #     text-color:
+      #     button-color:
+      #     heading:
+      #     button-url:
+      #     button-text:
+      # - label: Flexible Columns
+      #   icon: image
+      #   value:
+      #     _id: flexible-columns
+      #     title: Flexible Columns
+      #     section-styles:
+      #     number-of-columns-mobile:
+      #     number-of-columns-desktop:
+      #     columns:
+      # - label: Gallery
+      #   icon: image
+      #   value:
+      #     _id: gallery
+      #     title: Flexible Columns
+      #     gallery-images:
 
 #   gallery-images:
 #     label: Gallery Images
