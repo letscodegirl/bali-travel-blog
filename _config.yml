@@ -22,8 +22,8 @@ _structures:
         id-key: banner
         value:
           heading: This is a heading
-         	sub-heading: This is a sub-heading 
-         	banner-image:  
+          sub-heading: This is a sub-heading 
+          banner-image:  
       - label: Text
         icon: image
         id-key: text
