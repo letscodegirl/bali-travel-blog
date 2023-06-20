@@ -19,13 +19,14 @@ _structures:
     values:
       - label: Image Banner
         icon: image
+        id-key: banner
         value:
-          _id: banner
          	heading: This is a heading
          	sub-heading: This is a sub-heading 
          	banner-image:  
       - label: Text
         icon: image
+        id-key: text
         value: 
           _id: text
           content_html: 
