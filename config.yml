@@ -1,4 +1,0 @@
-collections:
-  posts:
-    output: true
-    permalink: /posts/:name

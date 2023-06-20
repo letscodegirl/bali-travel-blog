@@ -5,11 +5,12 @@ title: Blog Archive
 
 <section class="p-5p archive" x-data="{ search: '', posts: [...document.querySelectorAll('.post')] }" x-on:input="filterPosts">
     <div class="max-w-screen-lg mx-auto p-2 center mb-8 text-center">
-        <h2 class="font-serif text-4xl mb-2"> Search the blog </h2>
+        <h2 class="font-serif text-4xl mb-2"> Explore the blog </h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat necessitatibus? Praesentium fugit ex neque magni, possimus, iste itaque voluptatem id doloremque voluptas consequatur dolor cumque! Dolores possimus laboriosam adipisci.</p>
    
-        <div class="filter"> 
-            <input type="text" x-model="search" placeholder="Search posts...">
+        <div class="filter relative my-4 inline-block"> 
+            <!-- <svg class="absolute left-2 top-4" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.7" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M17 17l4 4M3 11a8 8 0 1016 0 8 8 0 00-16 0z" stroke="#000000" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg> -->
+            <input type="text" x-model="search" placeholder="Search..." class="p-4">
         </div>
     </div>
 
