@@ -1,4 +1,4 @@
 ---
 layout: modular-post
-page_blocks:
+page_blocks: []
 ---
