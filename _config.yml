@@ -23,13 +23,13 @@ _structures:
           _id: banner
           icon: image
           value: 
-         	heading:
-         	sub-heading: 
-         	banner-image:  
+         	  heading:
+         	  sub-heading: 
+         	  banner-image:  
       - label: Text
+        icon: image
         value: 
           _id: text
-          icon: image
           content_html: 
 #       - label: CTA Global
 #         icon: image
