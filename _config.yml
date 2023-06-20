@@ -23,7 +23,7 @@ _structures:
           _id: banner
           icon: image
           value: 
-         	heading:
+         	heading: 
          	sub-heading: 
          	banner-image:  
       - label: Text
