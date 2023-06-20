@@ -13,7 +13,7 @@ categories:
   - travel
   - italy
 featured_image: /uploads/travel/tuscany-1.jpg
-page-blocks:
+page_blocks:
 seo:
   title: A journey through Tuscany
   description: >-
