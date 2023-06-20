@@ -19,7 +19,7 @@ page-blocks: []
 _structures:
   page_blocks:
     values:
-      - label: Image Banner
+      - label: Banner
         icon: image
         id-key: banner
         value:
