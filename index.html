@@ -1,24 +1,28 @@
 ---
 layout: default
-title: Homepage 
+title: Homepage
 banner-image: /uploads/travel/travel-20.jpg
 about-image: /uploads/travel/travel-21.jpg
 destination-image: /uploads/travel/travel-22.jpg
-destinations: 
-  - destination: Bali
+destinations:
+  - destination: Europe
     start-date: 01/01/2022
     end-date: 15/01/2022
-  - destination: South Africa
+    description: Most loved travelers' destinations!
+  - destination: Asia
     start-date: 01/05/2022
-    end-date: 15/05/22
-  - destination: Thailand
+    end-date: 15/05/2023
+    description: Can you feel the vibe?
+  - destination: Americas
     start-date: 01/02/2023
     end-date: 15/03/2023
-  - destination: Europe
+    description: Amazing two continents!
+  - destination: Africa
     start-date: 01/04/2023
     end-date: 15/05/2023
+    description: Deep culture and wildlifes!
 seo:
-  title: 
+  title:
   description:
   social_image:
   twitter_card:
@@ -28,11 +32,11 @@ seo:
 
 
 <section class="ml-[20%] p-5p bg-cover bg-center flex items-center text-white min-h-80" style="background-image: url('{{page.banner-image}}')">
-  <div class="-ml-[20%]"> 
-     <h2 class="text-[10vw] font-light mb-12 leading-[0.9]"> A whole <br> new world. </h2> 
-     <h3 class="text-2xl uppercase max-w-screen-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusantium explicabo itaque cupiditate, recusandae, perspiciatis pariatur, error maxime unde tempore asperiores doloribus. </h3> 
-  </div> 
-</section> 
+  <div class="-ml-[20%]">
+     <h2 class="text-[10vw] font-light mb-12 leading-[0.9]"> A whole <br> new world. </h2>
+     <h3 class="text-2xl uppercase max-w-screen-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusantium explicabo itaque cupiditate, recusandae, perspiciatis pariatur, error maxime unde tempore asperiores doloribus. </h3>
+  </div>
+</section>
 
 <section class="bg-stone-100 p-5p">
 <div class="grid grid-cols-2 max-w-screen-xl mx-auto">
@@ -50,27 +54,27 @@ seo:
   <div class="col-span-full">
     <h2 class="text-4xl uppercase text-center mb-8"> Upcoming Travel Destinations </h2>
   </div>
-  
+
   <div class="col-span-3 p-8">
 
-      <hr class="border border-zinc-800 border-b-0"> 
+      <hr class="border border-zinc-800 border-b-0">
 
       {% for item in page.destinations %}
 
-      <div class="flex justify-between"> 
+      <div class="flex justify-between">
         <p class="my-6 tracking-wide uppercase"> {{item.destination}} </p>
         <p class="my-6"> {{item.start-date | date_to_string}} - {{item.end-date | date_to_string}} </p>
       </div>
       <hr class="border border-zinc-800 border-b-0">
 
-      {% endfor %} 
+      {% endfor %}
 
-  </div> 
+  </div>
   <div class="col-span-2 bg-cover bg-center py-8 flex items-end" style="background-image: url('{{page.destination-image}}')">
     <h2 class="bg-stone-200 p-4 text-3xl">
       Currently in...
     </h2>
-  </div> 
+  </div>
 
 </section>
 
@@ -78,27 +82,20 @@ seo:
 <!-- {{site.data.site-settings.global-cta-options}} -->
 <!------------------------ Featured blog loop ------------------------>
 <section class="p-5p">
-
-    <div class="max-w-screen-xl mx-auto flex justify-between mb-4">
-      <div class="text-3xl">&#8249;</div>
-      <h2 class="uppercase font-serif text-2xl tracking-wide"> Recently on the blog </h2>
-      <div class="text-3xl">&#8250;</div>
-    </div>
+  <div class="max-w-screen-xl mx-auto text-center justify-between mb-4">
+    <h2 class="uppercase font-serif text-2xl tracking-wide">Recently on the blog</h2>
+  </div>
+  <div class="carousel-container">
     <div class="max-w-screen-xl mx-auto grid grid-cols-7">
-
-
-        {% assign featured_posts = site.posts | where: 'featured', true %}
-        
-        {% for post in featured_posts limit:3 %}
-      
-        <div class="{% cycle 'col-span-2', 'col-span-3', 'col-span-2' %}">
-          {% include post-loop-item.html %}
-        </div>
-
-        {% endfor %}
-  
+      {% assign featured_posts = site.posts | where: 'featured', true %}
+      {% for post in featured_posts limit:3 %}
+      <div class="carousel-item {% cycle 'col-span-2', 'col-span-3', 'col-span-2' %}">
+        {% include post-loop-item.html %}
+      </div>
+      {% endfor %}
     </div>
- 
-</section> 
+  </div>
+</section>
+
 
 

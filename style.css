@@ -17,7 +17,7 @@
 
 .aspect-landcsape {
     padding-bottom: 60%; /* aspect 5/3 */
-}   
+}
 
 .filter .active {
     color: aqua;
@@ -85,3 +85,6 @@
         font-variant: small-caps;
     }
 }
+
+/* carousel */
+

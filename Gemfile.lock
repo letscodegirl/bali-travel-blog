@@ -16,6 +16,7 @@ GEM
     ffi (1.15.5-x86-mingw32)
     forwardable-extended (2.6.0)
     google-protobuf (3.23.3)
+    google-protobuf (3.23.3-arm64-darwin)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -70,6 +71,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-22
   x64-mingw32
   x86-mingw32
 

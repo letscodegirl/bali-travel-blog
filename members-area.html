@@ -1,28 +1,52 @@
 ---
 layout: default
-members-content: 
-    - title: This is a title
-      content_html: some content 
-    - title: This is a second title 
-      content_html: some content 
-    - title: This is a third title 
-      content_html: some content
+title: Members Area
+banner:
+  heading: Welcome Members
+  description: Welcome to Our Private Members' Area
+  image:
+    image_path: /uploads/travel/blog-bg-17-shop.jpg
+members-content:
+  - title: This is a title
+    content_html: >-
+      <p>Ad ut sit cillum cillum amet minim est deserunt ad cillum laborum.
+      Nulla ullamco esse mollit duis !!!!</p>
+    image: /uploads/travel/travel-1.jpg
+  - title: This is a second title
+    content_html: >-
+      Ad ut sit cillum cillum amet minim est deserunt ad cillum laborum. Nulla
+      ullamco esse mollit duis nisi ullamco pariatur pariatur Lorem excepteur
+      amet. Lorem exercitation aute cupidatat dolore. Ea in fugiat est aute
+      cillum exercitation deserunt tempor ea occaecat aute est et in. Amet ex
+      nostrud pariatur consequat ex ipsum ipsum fugiat pariatur enim. Qui
+      voluptate et ex magna aute eu in ex eu esse amet non exercitation.
+  - title: This is a third title
+    content_html: >-
+      Ad ut sit cillum cillum amet minim est deserunt ad cillum laborum. Nulla
+      ullamco esse mollit duis nisi ullamco pariatur pariatur Lorem excepteur
+      amet. Lorem exercitation aute cupidatat dolore. Ea in fugiat est aute
+      cillum exercitation deserunt tempor ea occaecat aute est et in. Amet ex
+      nostrud pariatur consequat ex ipsum ipsum fugiat pariatur enim. Qui
+      voluptate et ex magna aute eu in ex eu esse amet non exercitation.
 ---
 
-<section class="min-h-80 grid grid-cols-4 border-t-2 border-b-2 border-black">
+<section class="min-h-80 p-5p grid grid-cols-4 divide-x-2 divide-black">
 
-    <div class="col-span-1 p-4">
-
+    <div class="col-span-1">
+        <h2 class="text-4xl uppercase font-display tracking-widest"> EXPLORE </h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, distinctio modi, similique fuga sunt, vitae ab repellendus minus eum sequi tempore repellat consequatur ipsa. Numquam deserunt molestiae explicabo porro quos?</p>
             {% for item in page.members-content %}
-            <a href="#{{item.title | slugify }}" class="block uppercase font-bold"> {{item.title}}</a>
+            <a href="#{{ item.title | slugify }}" class="block"> {{item.title}}</a>
             {% endfor %}
 
     </div> 
 
-    <div class="col-span-3 border-l-2 border-black">
+    <div class="col-span-3">
 
         {% for item in page.members-content %}
-        <div id="{{item.title | slugify}}" class="p-5p border-b-2 border-black"> 
+        <div id="{{item.title | slugify}}" class="p-5p border-b-2 border-b-black"> 
+            <img src="{{item.image}}">
+            <h2 class="text-4xl uppercase font-display tracking-widest"> {{ item.title }} </h2>
             {{ item.content_html }}
         </div>
 
@@ -31,3 +55,5 @@ members-content:
     </div> 
     
 </section>
+
+
