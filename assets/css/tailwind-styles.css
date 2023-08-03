@@ -928,12 +928,6 @@ a {
 .left-0 {
   left: 0px;
 }
-.left-2 {
-  left: 0.5rem;
-}
-.top-4 {
-  top: 1rem;
-}
 .top-\[50\%\] {
   top: 50%;
 }
@@ -961,10 +955,6 @@ a {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 .my-6 {
   margin-top: 1.5rem;
@@ -1523,6 +1513,9 @@ a {
 }
 
 @media (min-width: 768px) {
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
   .md\:flex {
     display: flex;
   }
