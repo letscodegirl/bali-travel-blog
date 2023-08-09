@@ -1,30 +1,30 @@
 ---
-layout: default 
+layout: default
 banner-image: /uploads/travel/travel-25.jpg
 second-banner-image: /uploads/travel/travel-18.jpg
 ---
 
 <section class=" p-5p bg-cover bg-center flex items-center text-white min-h-80" style="background-image: url('{{page.banner-image}}')">
-	<div class=""> 
-	   <h2 class="text-[10vw] font-light mb-12 leading-[0.9]"> Shop </h2> 
-	   <h3 class="text-2xl uppercase max-w-screen-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusantium explicabo itaque cupiditate, recusandae, perspiciatis pariatur, error maxime unde tempore asperiores doloribus. </h3> 
-	</div> 
-  </section> 
+	<div class="">
+	   <h2 class="text-[10vw] font-light mb-12 leading-[0.9]"> Shop </h2>
+	   <h3 class="text-2xl uppercase max-w-screen-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Et accusantium explicabo itaque cupiditate, recusandae, perspiciatis pariatur, error maxime unde tempore asperiores doloribus. </h3>
+	</div>
+  </section>
 
 <section class="p-5p max-w-screen-xl mx-auto">
 
-	<h2 class="text-center text-4xl mb-4"> Shop all presets </h2> 
-	
-	<div class="grid grid-cols-3 gap-4">
-	
+	<h2 class="text-center text-4xl mb-4"> Shop all presets </h2>
+
+	<div class="grid md:grid-cols-3 gap-4">
+
 		{% for product in site.products-presets %}
-		
+
 			{% include product-loop-item.html %}
 
 	    {% endfor %}
-	
+
 	</div>
-	
+
 </section>
 
 <section class="bg-cover bg-center bg-fixed min-h-50 p-5p flex items-center" style="background-image:url({{page.second-banner-image}})">
@@ -33,34 +33,34 @@ second-banner-image: /uploads/travel/travel-18.jpg
 
 <section class="p-5p max-w-screen-xl mx-auto">
 
-	<h2 class="text-center text-4xl mb-4"> Shop all travel guides </h2> 
-	
-	<div class="grid grid-cols-3 gap-4">
-	
+	<h2 class="text-center text-4xl mb-4"> Shop all travel guides </h2>
+
+	<div class="grid md:grid-cols-3 gap-4">
+
 		{% for product in site.products-guides %}
-		
+
 			{% include product-loop-item.html %}
-			
+
 	    {% endfor %}
-	
+
 	</div>
-	
+
 </section>
 
 
 <section class="p-5p max-w-screen-xl mx-auto">
 
-	<h2 class="text-center text-4xl mb-4"> Shop all travel guides </h2> 
-	
-	<div class="grid grid-cols-3 gap-4">
+	<h2 class="text-center text-4xl mb-4"> Shop all travel guides </h2>
+
+	<div class="grid md:grid-cols-3 gap-4">
 
 	{% assign all_products = site.products-guides | concat: site.products-presets | sort: 'title'  %}
 
 
 	{% for product in all_products %}
-		
+
 		{% include product-loop-item.html type=product.type  %}
-			
+
 	{% endfor %}
 
 	</div>

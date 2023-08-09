@@ -39,7 +39,7 @@ seo:
 </section>
 
 <section class="bg-stone-100 p-5p">
-<div class="grid grid-cols-2 max-w-screen-xl mx-auto">
+<div class="grid md:grid-cols-2 max-w-screen-xl mx-auto">
   <div class="bg-image bg-cover bg-center" style="background-image: url('{{page.about-image}}')"> </div>
   <div class="py-15p px-8">
     <h2 class="p-8 text-center -ml-[20%] bg-stone-300 text-5xl max-w-sm"> A fascinating heading about the site </h2>
@@ -50,12 +50,12 @@ seo:
   </div>
 </section>
 
-<section class="p-5p max-w-screen-xl mx-auto grid grid-cols-5 gap-4">
+<section class="p-5p max-w-screen-xl mx-auto grid md:grid-cols-5 gap-4">
   <div class="col-span-full">
     <h2 class="text-4xl uppercase text-center mb-8"> Upcoming Travel Destinations </h2>
   </div>
 
-  <div class="col-span-3 p-8">
+  <div class="md:col-span-3 p-8">
 
       <hr class="border border-zinc-800 border-b-0">
 
@@ -70,7 +70,7 @@ seo:
       {% endfor %}
 
   </div>
-  <div class="col-span-2 bg-cover bg-center py-8 flex items-end" style="background-image: url('{{page.destination-image}}')">
+  <div class="md:col-span-2 bg-cover bg-center py-8 flex items-end" style="background-image: url('{{page.destination-image}}')">
     <h2 class="bg-stone-200 p-4 text-3xl">
       Currently in...
     </h2>
